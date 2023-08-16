@@ -1,0 +1,61 @@
+{
+
+      "par_general":
+      {
+        "indir": "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last/Fastq_sym_links",
+        "outdir" : "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last"
+      },
+
+      "wildcard_pattern":
+      {
+        "fastq_input" : "_fastq.gz" ,
+        "fastqc_bt" : "_fastq_fastqc.zip",
+        "fastq_trim": "_trimmed_fastq.gz",
+        "fastqc_at" : "_trimmed_fastq_fastqc.zip"
+      },
+
+    "executables":
+      {
+        "java_exec"       : "java-8",
+        "bowtie2_exec"    : "bowtie2",
+        "Trimmomatic_exec": "/g/scb/zaugg/daga/miniconda3/share/trimmomatic-0.36-5/trimmomatic.jar",
+        "fastqc_exec"     : "fastqc",
+        "samtools_exec"   : "samtools",
+        "picardtoolsJar"  : "/g/scb/zaugg/daga/miniconda3/share/picard-2.17.6-0/picard.jar",
+        "macs2_exec"       : "macs2"
+      },
+    "additionalInputFiles":
+      {
+        trim_adaptor_file : "/g/scb/zaugg/daga/miniconda3/share/trimmomatic-0.36-5/adapters/TruSeq3-SE.fa"
+
+      },
+
+    "par_trimming":
+      {
+        "trimmomatic_mode"  : "SE",
+        "trimmomatic_ILLUMINACLIP"  : "2:30:10",
+        "trimmomatic_trailing"      : 3,
+        "trimmomatic_leading"       : 3,
+        "trimmomatic_minlen"        : 36,
+        "trimmomatic_sliding_window" : "4:15",
+        "trimmomatic_adapters" : "/g/scb/zaugg/daga/miniconda3/share/trimmomatic-0.36-5/adapters/TruSeq3-SE.fa"
+
+      },
+
+    "par_align":
+    {
+        "bowtie2_sensitivity"   : "--very-sensitive",
+        "bowtie2_refGenome"     : "/g/scb2/zaugg/zaugg_shared/annotations/hg38/referenceGenome/Bowtie2/hg38"
+
+      },
+
+    "par_postalign":
+    {
+        "minMAPQscore"                       : 10,
+        "ValidationStringencySortSam"        : "LENIENT",
+        "ValidationStringencyMarkDuplicates" : "SILENT"
+      }
+
+
+
+}

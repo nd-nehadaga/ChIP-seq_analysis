@@ -1,0 +1,21 @@
+{
+    "__default__" :
+    {
+        "queueSLURM": "htc",
+        "group"     : "zaugg",
+        "nCPUs"     : "{threads}",
+        "memory"    : 35000,
+        "maxTime"   : "24:00:00",
+        "name"      : "HC_chipseq.{rule}.{wildcards}",
+        "output"    : "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last/Logs_and_Benchmarks/{rule}.{wildcards}.out",
+        "error"     : "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last/Logs_and_Benchmarks/{rule}.{wildcards}.err"
+    },
+
+    "alignment" :
+    {
+        "queueSLURM": "htc",
+        "maxTime"   :"24:00:00",
+        "memory"    : 40000
+    }
+
+}
