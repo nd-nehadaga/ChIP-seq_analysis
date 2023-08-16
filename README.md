@@ -1,8 +1,8 @@
 #H3K27ac ChIP-seq Data analysis
 
-It consit of 4 steps as numbered.
+There are 4 folders/files and the workflow is sequential 
 
- 1. Snakemake workflow : Consit of worflow for processing raw sequencing files from fastq-filtered bam files
- 2. Peak calling : This done using macs2
- 3. Generating consensus peakset and raw counts : Done using diffBind
- 4. Differential peak analysis: Done using DESeq2
+ 1. Snakemake_workflow : Consit of worflow for processing raw sequencing files from fastq-filtered bam files
+ 2. peak_calling_macs2 : This contains scripts for batch calling macs2 
+ 3. diffBind_consensus_peakset_raw_count.R : It is used for generating consensus peakset and raw counts
+ 4. diffpeak_analysis.R: Done using DESeq2
