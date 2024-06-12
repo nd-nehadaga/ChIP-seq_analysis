@@ -1,14 +1,14 @@
-setwd("/g/scb2/zaugg/daga/Autoimmune/Scripts/")
-
 library("DiffBind")
 library("DESeq2")
 library("ggplot2")
 
 
-### read the raw read count file generated from "DiffBind"
+
+
 ######### Input Data
-metadata = read.table("../JIA_metatable.txt",header = T,sep = "\t")
-JIA_raw_count = "../Consensus_peaks_raw_counts/JIA_overlap2_rawcounts.tsv"
+metadata = read.table("/path/for_inputfile_with/metainformation",header = T,sep = "\t")
+### read the raw read count file generated from "DiffBind" from step 3
+JIA_raw_count = "/outputfile/with/rawreadcounts/"
 design_matrix = ~ Age_group + Gender + Batch + Condition
 
 ######### Construction of dds object
@@ -55,7 +55,7 @@ hist(res$pvalue, col="grey")
 resOrdered_df <- data.frame(res[order(res$padj),])
 resOrdered_df$peak_id = rownames(resOrdered_df)
 
-write.table(x = resOrdered_df,file = "../Diff_peaks/JIA_diff_peak_analysis_result.txt",
+write.table(x = resOrdered_df,file = "/outfile_path_for/diff_peak_analysis_result.txt",
             quote = F,sep = "\t",row.names = F,col.names = TRUE)
 
 

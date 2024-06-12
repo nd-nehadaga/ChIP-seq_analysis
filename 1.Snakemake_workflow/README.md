@@ -6,4 +6,4 @@ Edit the config file to add
 3. wild_card_pattern for fastq_input. The default is "_fastq.gz"
 3. Path for different executables
 
-### Prepare the cluster file
+#### Prepare the cluster file
