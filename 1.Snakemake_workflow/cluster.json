@@ -7,8 +7,8 @@
         "memory"    : 35000,
         "maxTime"   : "24:00:00",
         "name"      : "HC_chipseq.{rule}.{wildcards}",
-        "output"    : "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last/Logs_and_Benchmarks/{rule}.{wildcards}.out",
-        "error"     : "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last/Logs_and_Benchmarks/{rule}.{wildcards}.err"
+        "output"    : "/output_directory/path_for/Logs_and_Benchmarks/{rule}.{wildcards}.out",
+        "error"     : "/output_directory/path_for/Logs_and_Benchmarks/{rule}.{wildcards}.err"
     },
 
     "alignment" :

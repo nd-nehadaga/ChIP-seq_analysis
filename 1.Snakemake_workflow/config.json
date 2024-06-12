@@ -2,8 +2,8 @@
 
       "par_general":
       {
-        "indir": "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last/Fastq_sym_links",
-        "outdir" : "/scratch/daga/Psoriasis_SLE/Psoriasis_SLE_all_batches/Psoriasis_SLE_seq_all_rounds_last"
+        "indir": "/input_directory/path/with/fastq_files",
+        "outdir" : "/output_directory/path/to/contain/out_files"
       },
 
       "wildcard_pattern":
@@ -18,15 +18,15 @@
       {
         "java_exec"       : "java-8",
         "bowtie2_exec"    : "bowtie2",
-        "Trimmomatic_exec": "/g/scb/zaugg/daga/miniconda3/share/trimmomatic-0.36-5/trimmomatic.jar",
+        "Trimmomatic_exec": "/path/to/trimmomatic.jar",
         "fastqc_exec"     : "fastqc",
         "samtools_exec"   : "samtools",
-        "picardtoolsJar"  : "/g/scb/zaugg/daga/miniconda3/share/picard-2.17.6-0/picard.jar",
+        "picardtoolsJar"  : "/path/to/picard.jar",
         "macs2_exec"       : "macs2"
       },
     "additionalInputFiles":
       {
-        trim_adaptor_file : "/g/scb/zaugg/daga/miniconda3/share/trimmomatic-0.36-5/adapters/TruSeq3-SE.fa"
+        trim_adaptor_file : "/path/to/adapterfile/TruSeq3-SE.fa"
 
       },
 
@@ -38,14 +38,14 @@
         "trimmomatic_leading"       : 3,
         "trimmomatic_minlen"        : 36,
         "trimmomatic_sliding_window" : "4:15",
-        "trimmomatic_adapters" : "/g/scb/zaugg/daga/miniconda3/share/trimmomatic-0.36-5/adapters/TruSeq3-SE.fa"
+        "trimmomatic_adapters" : "path/to/adapterfile/TruSeq3-SE.fa"
 
       },
 
     "par_align":
     {
         "bowtie2_sensitivity"   : "--very-sensitive",
-        "bowtie2_refGenome"     : "/g/scb2/zaugg/zaugg_shared/annotations/hg38/referenceGenome/Bowtie2/hg38"
+        "bowtie2_refGenome"     : "/path_to/referenceGenome/Bowtie2/hg38"
 
       },
 
