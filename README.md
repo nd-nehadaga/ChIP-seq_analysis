@@ -1,4 +1,4 @@
-#H3K27ac ChIP-seq Data analysis
+#### H3K27ac ChIP-seq Data analysis
 
 There are 4 folders/files and these are sequentially executed. They are used for processing ChIP-seq data and for subsequently identifying differential peaks
 
